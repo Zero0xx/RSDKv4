@@ -4,10 +4,10 @@
 int globalSFXCount = 0;
 int stageSFXCount  = 0;
 
-int masterVolume  = MAX_VOLUME;
+int masterVolume  = 40;
 int trackID       = -1;
-int sfxVolume     = MAX_VOLUME;
-int bgmVolume     = MAX_VOLUME;
+int sfxVolume     = 40;
+int bgmVolume     = 40;
 bool audioEnabled = false;
 
 bool musicEnabled = 0;
@@ -398,7 +398,7 @@ void ProcessAudioMixing(Sint32 *dst, const Sint16 *src, int len, int volume, sby
     if (volume == 0)
         return;
 
-    if (volume > MAX_VOLUME)
+    if (volume > 40)
         volume = MAX_VOLUME;
 
     float panL = 0.0;
